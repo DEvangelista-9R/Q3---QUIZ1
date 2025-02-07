@@ -1,0 +1,18 @@
+body{
+	padding: 5%;
+	background-color: 	#167648;
+	font-family: Notoserif;
+}
+
+.container{
+  background-color: #84c17b;	
+  text-align: center;
+  padding: 3%;
+  border-radius: 20px;
+}
+
+.text{
+	background-color: white;
+
+}
+

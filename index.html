@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Operators</title>
+
+    <!-- SETUP BOOTSTRAP: link to Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Link to JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Playwrite+TZ+Guides&family=Twinkle+Star&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Add style -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>JAVASCRIPT OPERATORS</h1>
+        <div class="text">
+            <p>GIVEN: if A = 24.18 and B = 7.18, compute for the following:</p>
+        </div>
+
+        <!-- Row for Grids -->
+        <div class="row justify-content-center">
+
+            <!-- Arithmetic Operators -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Arithmetic Operators</h4>
+                        <p class="mb-2">Exponent: <span id="exponentResult"></span></p>
+                        <p class="mb-2">Modulo: <span id="moduloResult"></span></p>
+                        <button type="button" class="btn btn-warning" onclick="
+                            var a = 24.18;  
+                            var b = 7.18;   
+                            var exponentResult = Math.pow(a, b);  
+                            var moduloResult = a % b;  
+                            document.getElementById('exponentResult').innerHTML = exponentResult.toFixed(4);
+                            document.getElementById('moduloResult').innerHTML = moduloResult.toFixed(4);
+                        ">Show Answer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Operators -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Comparison Operators</h4>
+                        <p class="mb-2">Is A greater than B? <span id="greaterResult"></span></p>
+                        <p class="mb-2">Is A equal to B? <span id="equalResult"></span></p>
+                        <button type="button" class="btn btn-warning" onclick="
+                            var a = 24.18;  
+                            var b = 7.18;   
+
+                            var greaterCondition = a > b;  
+                            var equalCondition = a === b;  
+
+                            document.getElementById('greaterResult').innerHTML = ' : ' + greaterCondition;
+                            document.getElementById('equalResult').innerHTML = ' : ' + equalCondition;
+                        ">Show Answer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logical Operators -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Logical Operators</h4>
+                        <p class="mb-2">(a <= b) && (a >= b): <span id="logicResult1"></span></p>
+                        <p class="mb-2">(a != b) || (a == b): <span id="logicResult2"></span></p>
+                        <button type="button" class="btn btn-warning" onclick="
+                            var a = 24.18;  
+                            var b = 7.18;   
+
+                            var result1 = (a <= b) && (a >= b);  
+                            var result2 = (a != b) || (a == b);  
+
+                            document.getElementById('logicResult1').innerHTML = result1 ? 'True' : 'False';  
+                            document.getElementById('logicResult2').innerHTML = result2 ? 'True' : 'False';  
+                        ">Show Answer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reload Button -->
+        <div>
+            <button type="button" class="btn btn-secondary" onclick="location.reload()">Reload</button>
+        </div>
+    </div>
+</body>
+
+</html>
